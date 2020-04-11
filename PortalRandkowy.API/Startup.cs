@@ -32,6 +32,7 @@ namespace PortalRandkowy.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddControllers();
             services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddCors();
                 
             
         }
@@ -43,7 +44,7 @@ namespace PortalRandkowy.API
             {
                 app.UseDeveloperExceptionPage();
             }
-           
+             app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
              app.UseMvc();           
         }
     }
