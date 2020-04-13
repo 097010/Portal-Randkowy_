@@ -11,8 +11,8 @@ using PortalRandkowy.API.Models;
 namespace PortalRandkowy.API.Controllers
 {
     // http://localhost:5000/api/Weather
-    [ApiController]
     [Route("[controller]")]
+    [ApiController]
     public class WeatherForecastController : ControllerBase
     {
         private readonly DataContext _context;

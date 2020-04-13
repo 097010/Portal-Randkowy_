@@ -33,7 +33,7 @@ namespace PortalRandkowy.API
             services.AddControllers();
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddCors();
-                
+            services.AddScoped<IAuthRepository , AuthRepository>();
             
         }
 
