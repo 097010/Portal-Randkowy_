@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -11,6 +12,7 @@ using PortalRandkowy.API.Models;
 namespace PortalRandkowy.API.Controllers
 {
     // http://localhost:5000/api/Weather
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class WeatherForecastController : ControllerBase
@@ -21,14 +23,14 @@ namespace PortalRandkowy.API.Controllers
             _context = context;
 
         }
-
+        //Get value
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
             var values = await _context.Values.ToListAsync();
             return Ok(values);
         }
-
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {

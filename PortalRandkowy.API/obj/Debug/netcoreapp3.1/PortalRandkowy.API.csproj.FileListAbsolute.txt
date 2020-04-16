@@ -122,3 +122,7 @@ C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.
 C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Dawid\Projekty\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
