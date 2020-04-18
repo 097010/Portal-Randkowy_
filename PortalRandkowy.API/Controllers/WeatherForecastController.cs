@@ -24,6 +24,7 @@ namespace PortalRandkowy.API.Controllers
 
         }
         //Get value
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
@@ -37,7 +38,7 @@ namespace PortalRandkowy.API.Controllers
             var value = await _context.Values.FirstOrDefaultAsync(x => x.Id == id);
             return Ok(value);
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> AddValue([FromBody] Value value)
         {
@@ -45,7 +46,7 @@ namespace PortalRandkowy.API.Controllers
             await _context.SaveChangesAsync();
             return Ok(value);
         }
-
+          [AllowAnonymous]
           [HttpPut("{id}")]
         public async Task<IActionResult> EditValue(int id, [FromBody] Value value)
         {
