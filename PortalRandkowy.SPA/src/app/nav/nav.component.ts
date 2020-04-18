@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
+import { count } from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav',
@@ -20,5 +21,13 @@ export class NavComponent implements OnInit {
     }, error => {
       console.log('wystąpił błąd logowania');
     });
+  }
+  loggedIn() {
+    const token = localStorage.getItem('token');
+    return !!token;
+  }
+  logout() {
+    localStorage.removeItem('token');
+    console.log('Zostałeś wylogowany');
   }
 }
