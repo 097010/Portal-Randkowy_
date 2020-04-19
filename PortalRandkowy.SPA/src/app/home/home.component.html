@@ -1,6 +1,4 @@
 <div class="container mt-5">
-
-
   <div *ngIf="!registerMode" style="text-align: center;">
     <h1>Znajdź swoją drugą połówkę : )</h1>
     <p class="lead">Sprawdź swoje nowe pary... Zarejestruj się!</p>
@@ -13,7 +11,7 @@
   <div *ngIf="registerMode" class="container">
     <div class="row justify-content-center">
       <div class="col-4">
-        <app-register [valuesFromHome] ="values"></app-register>
+        <app-register (cancelRegister)="CancelRegisterMode($event)"></app-register>
       </div>
     </div>
   </div>
