@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { count } from 'rxjs/operators';
 import { AlertifyService } from '../_services/alertify.service';
+import { tokenName } from '@angular/compiler';
 declare let alertify: any;
 
 @Component({
@@ -13,7 +14,7 @@ export class NavComponent implements OnInit {
 
   model: any = {};
 
-  constructor(private authService: AuthService ,  private alertifyService: AlertifyService) { }
+  constructor(public authService: AuthService ,  private alertifyService: AlertifyService) { }
 
   ngOnInit() {
   }
@@ -22,11 +23,11 @@ export class NavComponent implements OnInit {
       alertify.success('Zalogowałeś się do aplikacji');
     }, error => {
       alertify.error('wystąpił błąd logowania');
+      alertify.message('Sprawdź poprawość hasła lub loginu');
     });
   }
   loggedIn() {
-    const token = localStorage.getItem('token');
-    return !!token;
+    return this.authService.loggedIn();
   }
   logout() {
     localStorage.removeItem('token');
